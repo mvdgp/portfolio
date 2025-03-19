@@ -1,0 +1,35 @@
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';
+
+/* Hide scrollbar for all browsers */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Global branding styles */
+
+body {
+  margin: 0;
+  @apply font-sans font-light;
+}
+
+@layer base {
+  button:not(.utility) {
+      @apply cursor-pointer;
+  }
+
+  h1 {
+      @apply text-3xl font-bold;
+  }
+
+  .utility,
+  .social {
+      @apply cursor-pointer hover:scale-110 transition ease-in-out;
+  }
+}
