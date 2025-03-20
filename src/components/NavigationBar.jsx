@@ -6,7 +6,7 @@ import MobileMenu from './MobileMenu';
 
 const NavigationBar = ({ activeSection }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [language, setLanguage] = useState('EN'); // Initial state set to EN
+    const [language, setLanguage] = useState('EN');
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -28,7 +28,7 @@ const NavigationBar = ({ activeSection }) => {
                     setLanguage={() =>
                         setLanguage((prev) => (prev === 'EN' ? 'NL' : 'EN'))
                     }
-                    currentLanguage={language} // Pass the current language
+                    currentLanguage={language}
                 />
             </div>
 
