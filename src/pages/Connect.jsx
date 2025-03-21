@@ -103,7 +103,7 @@ const Connect = ({ language, isActive }) => {
                                 cursor-pointer
                                 border border-black-primary
                                 w-24 py-2 rounded-sm
-                                hover:scale-105 xl:hover:translate-x-1 active:bg-black-primary active:text-white-primary
+                                hover:scale-105 active:bg-black-primary active:text-white-primary
                                 transition ease-in-out
                             `}
                             disabled={state.submitting}

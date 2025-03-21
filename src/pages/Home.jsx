@@ -5,10 +5,13 @@ const Home = ({ language, isActive }) => {
     const { name, title, contactButton } = about[0];
 
     return (
-        <div className={`transition-opacity duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+        <div
+            className={`
+                transition-all duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'}
+            `}>
             <div className={`
                 mt-[-3.5rem]
-                transition-transform duration-500 ${isActive ? 'xl:translate-x-0' : 'xl:-translate-x-full'}
+                transition-all duration-500 ${isActive ? 'xl:translate-x-0' : 'xl:-translate-x-full'}
                 `}>
                 <div className="
                     h-full md:top-[3.5rem] md:h-[calc(100dvh-3.5rem)] w-full
@@ -24,7 +27,7 @@ const Home = ({ language, isActive }) => {
                 />
             </div>
             <div className={`
-                transition-transform duration-500 ${isActive ? 'translate-y-0' : '-translate-y-full'}
+                transition-all duration-500 ${isActive ? 'translate-x-0 xl:translate-x-0 xl:translate-y-0' : 'translate-x-full xl:-translate-x-0 xl:-translate-y-full'}
                 relative z-[3]
                 h-[100dvh]
                 flex flex-col justify-end xl:justify-center items-center

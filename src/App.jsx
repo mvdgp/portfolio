@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   // The main component
-  return (
+    return (
     <main
       className='
         h-[100dvh]
@@ -50,17 +50,16 @@ function App() {
         {routes.map((route, index) => {
           const sectionId = route.path.replace('/', '') || 'home';
           const isActive = activeSection === sectionId;
-
+  
           return (
             <section
               key={index}
               id={sectionId}
-              className='
+              className={`
                 h-[100dvh] pt-[3.5rem]
-                relative
-                snap-end
-                bg-white-primary
-              '
+                relative snap-end bg-white-primary
+                ${!isActive ? 'overflow-hidden' : ''}
+              `}
             >
               {/* Pass language and isActive to each route's component */}
               <route.component language={language} isActive={isActive} />

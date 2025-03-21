@@ -6,7 +6,7 @@ export const connect = [
         },
         subheading: {
             EN: 'Feel free to drop me a message or reach out via',
-            NL: 'Laat hier een bericht achter of neem contact op via'
+            NL: 'Laat een bericht achter of neem contact op via'
         },
         form: {
             name: {
