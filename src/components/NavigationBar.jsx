@@ -19,7 +19,7 @@ const NavigationBar = ({ activeSection }) => {
                 flex flex-col md:flex-row justify-between items-center
                 w-full h-[3.5rem]
                 md:px-4
-                md:bg-white-secondary
+                bg-white-primary md:bg-white-secondary
                 md:shadow-md
         `}>
             {/* Utility bar */}
@@ -45,7 +45,7 @@ const NavigationBar = ({ activeSection }) => {
             opacity-100 
             transition-all duration-300 ease-in-out 
             absolute top-0 
-            backdrop-blur-md border
+            backdrop-blur-3xl bg-white-primary bg-opacity-20
             w-full h-[100dvh]
             ` :
                         `
