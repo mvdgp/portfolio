@@ -18,7 +18,7 @@ const UtilityBar = ({ setLanguage, currentLanguage }) => {
                     aria-label={utility.label}
                 >
                     {utility.svg}
-                    <span className="ml-2 text-sm">{nextLanguage}</span>
+                    <span className="ml-2 text-base">{nextLanguage}</span>
                 </button>
             ))}
         </div>

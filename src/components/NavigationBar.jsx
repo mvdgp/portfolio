@@ -81,7 +81,7 @@ const NavigationBar = ({ activeSection }) => {
                                     href={`#${sectionId}`}
                                     className={`
                                         ${activeSection === sectionId ? 'font-bold bg-white-secondary' : ''}
-                                        h-full flex items-center p-8 md:p-0
+                                        h-full flex items-center p-8 md:p-0 text-lg md:text-base
                                         `}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
