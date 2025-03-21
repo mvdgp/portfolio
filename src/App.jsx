@@ -47,21 +47,26 @@ function App() {
         setLanguage={setLanguage}
       />
       <div>
-        {routes.map((route, index) => (
-          <section
-            key={index}
-            id={route.path.replace('/', '') || 'home'}
-            className='
-              h-[100dvh] pt-[3.5rem]
-              relative
-              snap-end
-              bg-white-primary
-            '
-          >
-            {/* Pass language to each route's component */}
-            <route.component language={language} />
-          </section>
-        ))}
+        {routes.map((route, index) => {
+          const sectionId = route.path.replace('/', '') || 'home';
+          const isActive = activeSection === sectionId;
+
+          return (
+            <section
+              key={index}
+              id={sectionId}
+              className='
+                h-[100dvh] pt-[3.5rem]
+                relative
+                snap-end
+                bg-white-primary
+              '
+            >
+              {/* Pass language and isActive to each route's component */}
+              <route.component language={language} isActive={isActive} />
+            </section>
+          );
+        })}
       </div>
     </main>
   );

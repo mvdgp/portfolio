@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { about } from '../content/about';
 
-const Home = ({ language }) => {
+const Home = ({ language, isActive }) => {
     const { name, title, contactButton } = about[0];
-    const [fadeIn, setFadeIn] = useState(false);
-
-    useEffect(() => {
-        setFadeIn(true);
-    }, []);
 
     return (
-        <div className={`transition-opacity duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`transition-opacity duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
             <div className="mt-[-3.5rem]">
                 <div className="
                     h-full md:top-[3.5rem] md:h-[calc(100dvh-3.5rem)] w-full
