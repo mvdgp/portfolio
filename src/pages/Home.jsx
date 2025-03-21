@@ -20,13 +20,15 @@ const Home = ({ language, isActive }) => {
                     filter grayscale contrast-[120%] blur-3xl"
                 />
             </div>
-            <div className="
+            <div className={`
+                yoohoo
+                transition-transform duration-500 ${isActive ? 'translate-y-0' : '-translate-y-full'}
                 relative z-[3]
                 h-[100dvh]
                 flex flex-col justify-end xl:justify-center items-center
                 pb-32 md:pb-0 xl:pl-[30rem]
                 text-white-secondary xl:text-black-primary
-            ">
+            `}>
                 <div className="
                     text-7xl xl:text-8xl font-extrabold
                 ">
@@ -39,6 +41,7 @@ const Home = ({ language, isActive }) => {
                 </div>
                 <a href="#contact"
                     className={`
+                        transition-all duration-1000 ${isActive ? 'scale-100' : 'scale-0'}
                         cursor-pointer
                         border border-white-secondary xl:border-black-primary
                         px-8 py-2 rounded-sm
