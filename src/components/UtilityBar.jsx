@@ -14,11 +14,11 @@ const UtilityBar = ({ setLanguage, currentLanguage }) => {
                             utility.onClick(setLanguage);
                         }
                     }}
-                    className="utility flex items-center gap-1"
+                    className="utility flex items-center gap-4 md:gap-1"
                     aria-label={utility.label}
                 >
                     {utility.svg}
-                    <span className="ml-2 text-sm">{nextLanguage}</span>
+                    <span className="ml-2">{nextLanguage}</span>
                 </button>
             ))}
         </div>
