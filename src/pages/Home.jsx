@@ -5,7 +5,7 @@ const Home = ({ language }) => {
     const { name, title, contactButton } = about[0];
 
     return (
-        <div className=''>
+        <div>
 
             
             <div className="

@@ -6,7 +6,7 @@ export const about = [
         NL: 'TECHNISCH CONSULTANT'
     },
     contactButton: {
-      EN: "Let's talk",
+      EN: "Let's connect",
       NL: "Contact"
     }
 
