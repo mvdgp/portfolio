@@ -3,8 +3,29 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            <div className='absolute h-full w-full text-red-500 flex justify-center items-end z-[1]'>test</div>
-            <div className="h-full w-full absolute bg-contain bg-no-repeat bg-bottom md:bg-left md:left-20 bg-[url('/Me2.png')] filter grayscale contrast-[120%]" />
+            {/* Foreground content */}
+            <div className="
+                absolute flex justify-center items-end z-[2]
+                h-full w-full
+                text-red-500">
+                    test
+            </div>
+
+            {/* Background image at the bottom with blur */}
+            <div className="
+                h-full w-full
+                absolute md:bg-left md:left-20 z-[1]
+                bg-contain bg-no-repeat bg-bottom bg-[url('/Me2.png')]
+                filter grayscale contrast-[120%]"
+            />
+
+            {/* Background image behind */}
+            <div className="
+                h-screen w-full
+                absolute md:bg-left md:left-20 z-0
+                bg-contain bg-no-repeat bg-bottom bg-[url('/Me2.png')]
+                filter grayscale contrast-[120%] blur-3xl"
+            />
         </div>
     );
 };
