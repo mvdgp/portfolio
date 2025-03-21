@@ -1,11 +1,11 @@
 import Home from '../pages/Home';
-import Creations from '../pages/Creations';
-import Profile from '../pages/Profile';
+import Portfolio from '../pages/Portfolio';
+import Experience from '../pages/Experience';
 import Connect from '../pages/Connect';
 
 export const routes = [
   { path: '/home', component: Home, EN: 'Home', NL: 'Home' },
-  { path: '/creations', component: Creations, EN: 'Creations', NL: 'Creaties' },
-  { path: '/profile', component: Profile, EN: 'Profile', NL: 'Profiel' },
+  { path: '/portfolio', component: Portfolio, EN: 'Portfolio', NL: 'Creaties' },
+  { path: '/experience', component: Experience, EN: 'Experience', NL: 'Ervaring' },
   { path: '/connect', component: Connect, EN: 'Connect', NL: 'Contact' },
 ];
