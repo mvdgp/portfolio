@@ -6,7 +6,10 @@ const Home = ({ language, isActive }) => {
 
     return (
         <div className={`transition-opacity duration-1000 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="mt-[-3.5rem]">
+            <div className={`
+                mt-[-3.5rem]
+                transition-transform duration-500 ${isActive ? 'xl:translate-x-0' : 'xl:-translate-x-full'}
+                `}>
                 <div className="
                     h-full md:top-[3.5rem] md:h-[calc(100dvh-3.5rem)] w-full
                     absolute xl:bg-left xl:left-32 z-[1]
@@ -21,7 +24,6 @@ const Home = ({ language, isActive }) => {
                 />
             </div>
             <div className={`
-                yoohoo
                 transition-transform duration-500 ${isActive ? 'translate-y-0' : '-translate-y-full'}
                 relative z-[3]
                 h-[100dvh]
