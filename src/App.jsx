@@ -52,8 +52,8 @@ function App() {
             key={index}
             id={route.path.replace('/', '') || 'home'}
             className='
-              h-[calc(100dvh-3.5rem)]
-              relative top-[3.5rem]
+              h-[100dvh] pt-[3.5rem]
+              relative
               snap-end
               bg-white-primary
             '

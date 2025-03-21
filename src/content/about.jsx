@@ -2,11 +2,11 @@ export const about = [
   {
     name: 'MANOUK',
     title: {
-        EN: 'TECHNICAL CONSULTANT',
-        NL: 'TECHNISCH CONSULTANT'
+        EN: 'SERVICENOW DEVELOPER',
+        NL: 'SERVICENOW DEVELOPER'
     },
     contactButton: {
-      EN: "Let's connect",
+      EN: "Let's talk",
       NL: "Contact"
     }
 

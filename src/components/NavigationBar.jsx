@@ -16,15 +16,15 @@ const NavigationBar = ({ activeSection, language, setLanguage }) => {
       className={`
         pointer-events-none
         sticky top-0 z-50
-        flex flex-col md:flex-row justify-between items-center
+        flex flex-row justify-between items-center
         w-full h-[3.5rem]
         md:px-4
-        bg-white-primary md:bg-white-secondary
-        md:shadow-md
+        md:bg-white-secondary md:shadow-md
+        ${activeSection !== 'home' ? 'bg-white-primary' : ''}
       `}
     >
       {/* Utility bar */}
-      <div className="pointer-events-auto hidden md:flex w-1/3">
+      <div className="pointer-events-auto flex w-1/3 p-3 md:pl-0">
         <UtilityBar setLanguage={setLanguage} currentLanguage={language} />
       </div>
 
@@ -106,7 +106,7 @@ const NavigationBar = ({ activeSection, language, setLanguage }) => {
           })}
         </ul>
 
-        {/* Utility & Social bar for mobile */}
+        {/* Social bar for mobile */}
         <div
           className={`
             ${isMenuOpen ? 'flex flex-col' : 'hidden'}
@@ -117,7 +117,6 @@ const NavigationBar = ({ activeSection, language, setLanguage }) => {
             pointer-events-auto
           `}
         >
-          <UtilityBar setLanguage={setLanguage} currentLanguage={language} />
           <div
             className="
               my-6
