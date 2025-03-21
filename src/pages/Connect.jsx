@@ -91,7 +91,7 @@ const Connect = ({ language, isActive }) => {
                             name="message"
                             value={formData.message}
                             onChange={handleInputChange}
-                            className="h-[19dvh] xl:h-[29dvh] rounded-sm p-1"
+                            className="h-[18dvh] xl:h-[28dvh] rounded-sm p-1"
                         ></textarea>
                         <ValidationError prefix="Message" field="message" errors={state.errors} />
                     </div>

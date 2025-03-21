@@ -46,6 +46,7 @@ const NavigationBar = ({ activeSection, language, setLanguage }) => {
                 w-full h-[100dvh]
               `
               : `
+                pointer-events-none invisible md:visible md:pointer-events-auto
                 transition-all md:transition-none 
                 absolute md:relative 
                 top-[3.5rem] md:top-0 

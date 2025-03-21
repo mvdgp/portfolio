@@ -41,7 +41,7 @@ const Home = ({ language, isActive }) => {
                 ">
                     {title[language]}
                 </div>
-                <a href="#contact"
+                <a href="#connect"
                     className={`
                         transition-all duration-1000 ${isActive ? 'scale-100' : 'scale-0'}
                         cursor-pointer
