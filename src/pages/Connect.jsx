@@ -52,7 +52,7 @@ const Connect = ({ language, isActive }) => {
                 </a>
             </div>
 
-            <div className="w-full overflow-hidden">
+            <div className="w-full p-1 overflow-hidden">
                 <form
                     onSubmit={handleFormSubmit}
                     className={`

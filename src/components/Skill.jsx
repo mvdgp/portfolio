@@ -4,7 +4,7 @@ const Skill = ({ skill, className, style }) => {
     return (
         <div
             className={`
-                flex-grow flex-shrink basis-0 shadow-md hover:scale-[102%] transition ease-in-out ${className}
+                flex-grow flex-shrink basis-0 shadow-md hover:scale-[102%] ${className}
             `}
             style={style}
         >
