@@ -3,11 +3,17 @@ import { routes } from './content/routes';
 import { useEffect, useState } from 'react';
 
 function App() {
-  // Keep track of the active section
-  const [activeSection, setActiveSection] = useState('home');
-
-  // Keep track of the selected language
+  const [activeSection, setActiveSection] = useState(null); // Start with null
   const [language, setLanguage] = useState('EN');
+
+  useEffect(() => {
+    // Delay setting the initial active section to trigger animations
+    const timeout = setTimeout(() => {
+      setActiveSection('home');
+    }, 100); // Adjust the delay as needed (100ms here)
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     const handleIntersection = (entries) => {
@@ -31,8 +37,7 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  // The main component
-    return (
+  return (
     <main
       className='
         h-[100dvh]
@@ -40,7 +45,6 @@ function App() {
         bg-white-primary
       '
     >
-      {/* Pass language and setLanguage to NavigationBar */}
       <NavigationBar
         activeSection={activeSection}
         language={language}
@@ -50,7 +54,7 @@ function App() {
         {routes.map((route, index) => {
           const sectionId = route.path.replace('/', '') || 'home';
           const isActive = activeSection === sectionId;
-  
+
           return (
             <section
               key={index}
@@ -58,10 +62,9 @@ function App() {
               className={`
                 h-[100dvh] pt-[3.5rem]
                 relative snap-end bg-white-primary
-                ${!isActive ? 'overflow-hidden' : ''}
+                ${!isActive ? 'overflow-x-hidden' : ''}
               `}
             >
-              {/* Pass language and isActive to each route's component */}
               <route.component language={language} isActive={isActive} />
             </section>
           );

@@ -11,19 +11,17 @@ const Home = ({ language, isActive }) => {
             `}>
             <div className={`
                 mt-[-3.5rem]
-                transition-all duration-500 ${isActive ? 'xl:translate-x-0' : 'xl:-translate-x-full'}
+                transition-all duration-500 ${isActive ? 'px-0 xl:translate-x-0' : 'px-96 xl:-translate-x-full'}
                 `}>
                 <div className="
                     h-full md:top-[3.5rem] md:h-[calc(100dvh-3.5rem)] w-full
                     absolute xl:bg-left xl:left-32 z-[1]
-                    bg-contain bg-no-repeat bg-bottom bg-[url('/Me2.png')]
-                    filter grayscale contrast-[120%]"
+                    bg-contain bg-no-repeat bg-bottom bg-[url('/Me-Grayscale.png')]"
                 />
                 <div className="
                     h-full md:top-[3.5rem] md:h-[calc(100dvh-3.5rem)] w-full
                     absolute xl:bg-left xl:left-32 z-0
-                    bg-contain bg-no-repeat bg-bottom bg-[url('/Me2.png')]
-                    filter grayscale contrast-[120%] blur-3xl"
+                    bg-contain bg-no-repeat bg-bottom bg-[url('/Me-Grayscale-Blurred.png')]"
                 />
             </div>
             <div className={`

@@ -20,7 +20,6 @@ const NavigationBar = ({ activeSection, language, setLanguage }) => {
         w-full h-[3.5rem]
         md:px-4
         md:bg-white-secondary md:shadow-md
-        ${activeSection !== 'home' ? 'bg-white-primary' : ''}
       `}
     >
       {/* Utility bar */}

@@ -22,15 +22,25 @@ export const experience = [
                 institution: 'ServiceNow'
             }
         ],
-        skillset: [
-            'ServiceNow',
-            'JavaScript',
-            'HTML',
-            'CSS',
-            'React',
-            'NextJS',
-            'REST API',
-            'Jest'
-        ]
+        skillset: {
+            frontend: [
+                'JavaScript',
+                'HTML',
+                'CSS',
+                'React',
+                'NextJS',
+                'Tailwind',
+                
+            ],
+            backend: [
+                'REST APIs'
+            ],
+            databases: [],
+            devops: [
+                'ServiceNow',
+                'Prismic',
+                'Jest'
+            ],
+        }
     },
 ];
