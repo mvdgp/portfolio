@@ -13,14 +13,14 @@ export const portfolio = [
             large:'/Project-Donnybap-large.png',
             small:'/Project-Donnybap-small.png'
         },
-        url: 'www.donnybap.nl',
+        url: 'https://www.donnybap.nl',
         repo: 'https://github.com/mvdgp/donny.bap_2024'
     },
     {
         name: 'Fietsmaatjes',
         description: {
-            EN: 'A website for a volunteers organization in Amsterdam Nieuw Sloten, built with NextJS, React, TailwindCSS and Prismic as a headless CMS.',
-            NL: 'Een website voor een vrijwilligersorganisatie in Amsterdam Nieuw Sloten, gebouwd met NextJS, React, TailwindCSS en Prismic als headless CMS.'
+            EN: 'A website for a volunteers organization in Amsterdam Nieuw Sloten, built with NextJS, React and Prismic as headless CMS.',
+            NL: 'Een website voor een vrijwilligersorganisatie in Amsterdam Nieuw Sloten, gebouwd met NextJS, React en Prismic als headless CMS.'
         },
         date: {
             EN: 'March 2025',
@@ -30,7 +30,7 @@ export const portfolio = [
             large:'/Project-Fietsmaatjes-large.png',
             small:'/Project-Fietsmaatjes-small.png'
         },
-        url: 'www.fietsmaatjesamsterdamnieuw-sloten.nl',
+        url: 'https://www.fietsmaatjesamsterdamnieuw-sloten.nl',
         repo: 'https://github.com/mvdgp/fietsmaatjes'
     },
 ];

@@ -49,7 +49,7 @@ const Home = ({ language, isActive }) => {
                         border border-white-secondary xl:border-black-primary
                         px-8 py-2 rounded-sm
                         active:bg-white-secondary active:text-black-secondary
-                        xl:hover:scale-105 xl:active:bg-black-primary xl:active:text-white-primary
+                        xl:hover:scale-105 xl:hover:duration-150 xl:active:bg-black-primary xl:active:text-white-primary
                         transition ease-in-out
                     `}>
                     {contactButton[language]}
