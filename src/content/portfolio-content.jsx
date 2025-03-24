@@ -10,8 +10,8 @@ export const portfolio = [
             NL: 'November 2024'
         },
         image: {
-            large: '/Donnybap.png',
-            small: '/Donnybap.png'
+            large:'/Project-Donnybap-large.png',
+            small:'/Project-Donnybap-small.png'
         },
         url: 'www.donnybap.nl',
         repo: 'https://github.com/mvdgp/donny.bap_2024'
@@ -27,8 +27,8 @@ export const portfolio = [
             NL: 'Maart 2025'
         },
         image: {
-            large: '/Fietsmaatjes.png',
-            small: '/Fietsmaatjes.png'
+            large:'/Project-Fietsmaatjes-large.png',
+            small:'/Project-Fietsmaatjes-small.png'
         },
         url: 'www.fietsmaatjesamsterdamnieuw-sloten.nl',
         repo: 'https://github.com/mvdgp/fietsmaatjes'
@@ -44,59 +44,8 @@ export const portfolio = [
             NL: 'Maart 2025'
         },
         image: {
-            large: '/Fietsmaatjes.png',
-            small: '/Fietsmaatjes.png'
-        },
-        url: 'www.fietsmaatjesamsterdamnieuw-sloten.nl',
-        repo: 'https://github.com/mvdgp/fietsmaatjes'
-    },
-    {
-        name: 'Fietsmaatjes',
-        description: {
-            EN: 'A website for a volunteers organization in Amsterdam Nieuw Sloten, built with NextJS, React, TailwindCSS and Prismic as a headless CMS.',
-            NL: 'Een website voor een vrijwilligersorganisatie in Amsterdam Nieuw Sloten, gebouwd met NextJS, React, TailwindCSS en Prismic als headless CMS.'
-        },
-        date: {
-            EN: 'March 2025',
-            NL: 'Maart 2025'
-        },
-        image: {
-            large: '/Fietsmaatjes.png',
-            small: '/Fietsmaatjes.png'
-        },
-        url: 'www.fietsmaatjesamsterdamnieuw-sloten.nl',
-        repo: 'https://github.com/mvdgp/fietsmaatjes'
-    },
-    {
-        name: 'Fietsmaatjes',
-        description: {
-            EN: 'A website for a volunteers organization in Amsterdam Nieuw Sloten, built with NextJS, React, TailwindCSS and Prismic as a headless CMS.',
-            NL: 'Een website voor een vrijwilligersorganisatie in Amsterdam Nieuw Sloten, gebouwd met NextJS, React, TailwindCSS en Prismic als headless CMS.'
-        },
-        date: {
-            EN: 'March 2025',
-            NL: 'Maart 2025'
-        },
-        image: {
-            large: '/Fietsmaatjes.png',
-            small: '/Fietsmaatjes.png'
-        },
-        url: 'www.fietsmaatjesamsterdamnieuw-sloten.nl',
-        repo: 'https://github.com/mvdgp/fietsmaatjes'
-    },
-    {
-        name: 'Fietsmaatjes',
-        description: {
-            EN: 'A website for a volunteers organization in Amsterdam Nieuw Sloten, built with NextJS, React, TailwindCSS and Prismic as a headless CMS.',
-            NL: 'Een website voor een vrijwilligersorganisatie in Amsterdam Nieuw Sloten, gebouwd met NextJS, React, TailwindCSS en Prismic als headless CMS.'
-        },
-        date: {
-            EN: 'March 2025',
-            NL: 'Maart 2025'
-        },
-        image: {
-            large: '/Fietsmaatjes.png',
-            small: '/Fietsmaatjes.png'
+            large:'/Project-Fietsmaatjes-large.png',
+            small:'/Project-Fietsmaatjes-small.png'
         },
         url: 'www.fietsmaatjesamsterdamnieuw-sloten.nl',
         repo: 'https://github.com/mvdgp/fietsmaatjes'
