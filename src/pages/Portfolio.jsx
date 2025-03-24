@@ -48,7 +48,11 @@ const Portfolio = ({ language, isActive }) => {
         <>
             <div
                 ref={containerRef} // Attach ref to the container
-                className="overflow-x-auto snap-x snap-mandatory flex items-center space-x-8 px-8 py-2 lg:p-8"
+                className={`
+                    ${isActive ? 'opacity-100' : 'opacity-0'}
+                    transition-all duration-1000 ease-in-out
+                    overflow-x-auto snap-x snap-mandatory flex items-center space-x-8 px-8 py-2 lg:p-8
+                `}
             >
                 {/* Empty space on the left for lg and larger */}
                 <div className="xl:hidden flex-shrink-0 w-[52%]"></div>
@@ -105,7 +109,7 @@ const Portfolio = ({ language, isActive }) => {
                                     active:bg-black-primary active:text-white-primary
                                     transition ease-in-out
                                 `}>
-                                View Live
+                                {language === 'EN' ? 'View Live' : 'Bekijk Live'}
                             </a>
                             <a
                                 href={portfolio[focusedItem].repo}
@@ -120,7 +124,7 @@ const Portfolio = ({ language, isActive }) => {
                                     active:bg-black-primary active:text-white-primary
                                     transition ease-in-out
                                 `}>
-                                GitHub Repo
+                                {language === 'EN' ? 'GitHub Repo' : 'GitHub Code'}
                             </a>
                         </div>
                     </div>
