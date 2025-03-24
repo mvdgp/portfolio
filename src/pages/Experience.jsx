@@ -1,41 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { experience } from '../content/experience-content';
 import Achievement from '../components/Achievement';
 import Skill from '../components/Skill';
 
 const Experience = ({ language, isActive }) => {
     const [expandedSection, setExpandedSection] = useState('achievements');
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [animationKey, setAnimationKey] = useState(0); // Key to reset animation
     const achievements = experience[0].achievements;
     const skillset = experience[0].skillset;
     const introduction = experience[0].introduction;
+    const slideshow = experience[0].slideshow;
 
     const toggleSection = (section) => {
         if (expandedSection !== section) {
-            // Collapse others first
             setExpandedSection(null);
 
-            // Expand the clicked section after a short delay
             setTimeout(() => {
                 setExpandedSection(section);
-            }, 300); // Adjust the delay (in milliseconds) as needed
+            }, 300);
         } else {
             // Collapse the currently expanded section
             setExpandedSection(null);
         }
     };
 
-        return (
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => {
+                const nextIndex = (prevIndex + 1) % slideshow.length;
+                setAnimationKey((key) => key + 1); // Increment key to reset animation
+                return nextIndex;
+            });
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [slideshow.length]);
+
+    return (
         <div className="flex flex-col h-full w-full">
             <div
                 className={`
-                    transition-all duration-1000 ease-in-out ${isActive ? 'pb-auto lg:pr-12 opacity-100' : 'pb-12 lg:pb-4 lg:pr-0 opacity-0'}
-                    h-full m-4 p-4 rounded-sm
+                    relative transition-all duration-1000 ease-in-out ${isActive ? 'pb-auto lg:pr-12 opacity-100' : 'pb-12 lg:pb-4 lg:pr-0 opacity-0'}
+                    h-full mx-4 mb-4 lg:m-4 p-4 rounded-sm
                     flex items-end lg:justify-end
                     bg-white-secondary text-justify
                 `}
-                dangerouslySetInnerHTML={{ __html: introduction[language] }}
-            />
-    
+            >
+                {/* Slideshow Images */}
+                {slideshow.map((image, index) => (
+                    <img
+                        key={`${index}-${animationKey}`} // Reset animation by changing key
+                        src={image}
+                        alt={`Slideshow ${index}`}
+                        className={`
+                            absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out
+                            ${index === currentImageIndex ? 'opacity-100 animate-driftDown animate-driftOpacity' : 'opacity-0'}
+                        `}
+                    />
+                ))}
+
+                {/* Introduction Text */}
+                <div
+                    className="relative z-10"
+                    dangerouslySetInnerHTML={{ __html: introduction[language] }}
+                />
+            </div>
+
             <div className="h-full w-full flex flex-col lg:flex-row px-4 justify-center pt-1">
                 {/* Achievements */}
                 <div className="lg:px-16 mb-1 w-full">
@@ -77,7 +108,7 @@ const Experience = ({ language, isActive }) => {
                         </ul>
                     </div>
                 </div>
-    
+
                 {/* Skillset */}
                 <div className="lg:px-16 w-full mb-1">
                     <div

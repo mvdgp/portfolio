@@ -4,9 +4,13 @@ export const experience = [
             EN: 'Achievements',
             NL: 'Prestaties'
         },
+        slideshow: [
+            '/Donnybap.png',
+            '/Fietsmaatjes.png'
+        ],
         introduction: {
-            EN: 'I am a huge code enthusiast, looking to break into full-stack development, beyond the borders of SaaS.<br/>Want to see my experiences in action? Visit the Portfolio page for a sneak preview!',
-            NL: 'Ik heb een enorme passie voor code en ben op zoek naar kansen om full-stack development te verkennen, voorbij de grenzen van SaaS.<br/>Wil je mijn ervaringen in actie zien? Bezoek de Portfolio pagina voor een sneak preview! '
+            EN: 'I am a huge code enthusiast, looking to break into full-stack development, beyond the borders of SaaS.<br/>Want to see my skills in action? Visit the Portfolio page for a sneak preview!',
+            NL: 'Ik heb een enorme passie voor code en ben op zoek naar kansen om full-stack development te verkennen, voorbij de grenzen van SaaS.<br/>Wil je mijn vaardigheden in actie zien? Bezoek de Portfolio pagina voor een sneak preview! '
         },
         skillsetHeader: {
             EN: 'Skillset',
