@@ -5,7 +5,7 @@ import Connect from '../pages/Connect';
 
 export const routes = [
   { path: '/home', component: Home, EN: 'Home', NL: 'Home' },
-  { path: '/portfolio', component: Portfolio, EN: 'Portfolio', NL: 'Creaties' },
+  { path: '/portfolio', component: Portfolio, EN: 'Portfolio', NL: 'Portfolio' },
   { path: '/experience', component: Experience, EN: 'Experience', NL: 'Ervaring' },
   { path: '/connect', component: Connect, EN: 'Connect', NL: 'Contact' },
 ];
