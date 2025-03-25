@@ -4,7 +4,7 @@ import { portfolio } from '../content/portfolio-content';
 const Portfolio = ({ language, isActive }) => {
     const firstItemRef = useRef(null);
     const containerRef = useRef(null);
-    const [focusedItem, setFocusedItem] = useState(null);
+    const [focusedItem, setFocusedItem] = useState(0);
 
     useLayoutEffect(() => {
         // Set the default scroll position to the first portfolio item
@@ -50,7 +50,7 @@ const Portfolio = ({ language, isActive }) => {
                 className={`
                     ${isActive ? 'opacity-100' : 'opacity-0'}
                     transition-all duration-1000 ease-in-out
-                    overflow-x-auto snap-x snap-mandatory flex items-center space-x-8 xl:space-x-12 px-8 py-2 lg:p-8
+                    overflow-x-auto snap-x snap-mandatory flex items-center space-x-12 px-8 py-2 lg:p-8
                 `}
             >
                 {/* Empty space on the left for lg and larger */}
