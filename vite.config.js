@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
+  base: '/', // Set the base path for production
   server: {
     host: true,
   },
@@ -17,4 +18,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-})
+});
