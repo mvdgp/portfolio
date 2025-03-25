@@ -7,7 +7,6 @@ const Portfolio = ({ language, isActive }) => {
     const [focusedItem, setFocusedItem] = useState(0);
 
     useLayoutEffect(() => {
-        // Set the default scroll position to the first portfolio item
         if (firstItemRef.current && containerRef.current) {
             const firstItem = firstItemRef.current;
             const container = containerRef.current;
@@ -15,7 +14,7 @@ const Portfolio = ({ language, isActive }) => {
             const offsetLeft = firstItem.offsetLeft - container.offsetLeft;
             container.scrollLeft = offsetLeft;
         }
-    }, []); // Empty dependency array ensures this runs only once on mount
+    }, []);
 
     useEffect(() => {
         const container = containerRef.current;
@@ -32,7 +31,7 @@ const Portfolio = ({ language, isActive }) => {
             },
             {
                 root: container,
-                threshold: 1.0, // Fully in focus
+                threshold: 1.0,
             }
         );
 
@@ -46,24 +45,29 @@ const Portfolio = ({ language, isActive }) => {
     return (
         <>
             <div
-                ref={containerRef} // Attach ref to the container
+                ref={containerRef}
                 className={`
                     ${isActive ? 'opacity-100' : 'opacity-0'}
                     transition-all duration-1000 ease-in-out
-                    overflow-x-auto snap-x snap-mandatory flex items-center space-x-12 px-8 py-2 lg:p-8
+                    overflow-x-auto snap-x snap-mandatory
+                    flex items-center space-x-12
+                    px-8 py-2 lg:p-8
                 `}
             >
-                {/* Empty space on the left for lg and larger */}
                 <div className="xl:hidden flex-shrink-0 w-[52%]"></div>
 
                 {portfolio.map((item, index) => (
                     <div
                         key={index}
-                        ref={index === 0 ? firstItemRef : null} // Attach ref to the first item
-                        data-index={index} // Add data-index for tracking
-                        className={`portfolio-item snap-center flex-shrink-0 w-[68%] xl:w-[52%]
-                            ${focusedItem !== index ? 'filter grayscale transition duration-500 ease-in-out' : 'scale-[103%] xl:scale-105 transition duration-500 ease-in-out'}
-                            `} // Apply grayscale and smooth transition if not in focus
+                        ref={index === 0 ? firstItemRef : null}
+                        data-index={index}
+                        className={`
+                            portfolio-item snap-center flex-shrink-0
+                            w-[68%] xl:w-[52%]
+                            ${focusedItem !== index
+                                ? 'filter grayscale transition duration-500 ease-in-out'
+                                : 'scale-[103%] xl:scale-105 transition duration-500 ease-in-out'}
+                        `}
                     >
                         <img
                             src={item.image.large}
@@ -78,38 +82,36 @@ const Portfolio = ({ language, isActive }) => {
                     </div>
                 ))}
 
-                {/* Empty space on the right */}
                 <div className="flex-shrink-0 w-[68%] xl:w-[52%] border border-transparent"></div>
             </div>
 
-            {/* Display the name of the focused item */}
-            <div className="
-                flex
-            ">
+            <div className="flex">
                 {focusedItem !== null && (
                     <div className="
-                        xl:w-full py-4 px-8 xl:px-16 xl:py-0 text-justify
+                        xl:w-full py-4 px-8 xl:px-16 xl:py-0
+                        text-justify
                     ">
                         <h2 className="font-bold uppercase">
                             {portfolio[focusedItem].name} ({portfolio[focusedItem].date})
                         </h2>
-                        <p className="">
-                            {portfolio[focusedItem].description[language]}
-                        </p>
-                        <div className="absolute bottom-10 mt-6 flex gap-6 items-center ">
+                        <p>{portfolio[focusedItem].description[language]}</p>
+                        <div className="
+                            absolute bottom-10 mt-6
+                            flex gap-6 items-center
+                        ">
                             <a
                                 href={portfolio[focusedItem].url}
                                 target="_blank"
                                 rel="noreferrer"
                                 className={`
                                     transition-all duration-1000 ${isActive ? 'scale-100' : 'scale-0'}
-                                    cursor-pointer
-                                    border border-black-primary
+                                    cursor-pointer border border-black-primary
                                     px-8 py-2 rounded-sm
-                                    xl:hover:scale-105 xl:hover:duration-150 
+                                    xl:hover:scale-105 xl:hover:duration-150
                                     active:bg-black-primary active:text-white-primary
                                     transition ease-in-out
-                                `}>
+                                `}
+                            >
                                 {language === 'EN' ? 'View Live' : 'Bekijk Live'}
                             </a>
                             <a
@@ -118,13 +120,13 @@ const Portfolio = ({ language, isActive }) => {
                                 rel="noreferrer"
                                 className={`
                                     transition-all duration-1000 ${isActive ? 'scale-100' : 'scale-0'}
-                                    cursor-pointer
-                                    border border-black-primary
+                                    cursor-pointer border border-black-primary
                                     px-8 py-2 rounded-sm
                                     xl:hover:scale-105 xl:hover:duration-150
                                     active:bg-black-primary active:text-white-primary
                                     transition ease-in-out
-                                `}>
+                                `}
+                            >
                                 {language === 'EN' ? 'GitHub Repo' : 'GitHub Code'}
                             </a>
                         </div>
@@ -133,21 +135,26 @@ const Portfolio = ({ language, isActive }) => {
 
                 {focusedItem !== null && (
                     <>
-                        {/* Display the focused item number */}
                         <div className={`
                             ${isActive ? 'opacity-100' : 'opacity-0'}
-                            transition ease-in-out hidden xl:flex absolute bottom-8 right-12 text-black-primary font-extrabold text-6xl
+                            transition ease-in-out hidden xl:flex
+                            absolute bottom-8 right-12
+                            text-black-primary font-extrabold text-6xl
                         `}>
                             {String(focusedItem + 1).padStart(2, '0')}
                         </div>
 
-                        {/* Progress Bar */}
                         <div className={`
                             ${isActive ? 'opacity-100' : 'opacity-0'}
-                            transition ease-in-out absolute bottom-0 w-full h-3 bg-gray-200 mt-4
+                            transition ease-in-out absolute bottom-0
+                            w-full h-3 bg-gray-200 mt-4
                         `}>
                             <div
-                                className="absolute bottom-0 left-0 h-full bg-black-primary transition-all duration-500"
+                                className="
+                                    absolute bottom-0 left-0
+                                    h-full bg-black-primary
+                                    transition-all duration-500
+                                "
                                 style={{
                                     width: `${((focusedItem + 1) / portfolio.length) * 100}%`,
                                 }}

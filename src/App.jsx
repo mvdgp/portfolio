@@ -3,20 +3,18 @@ import { routes } from './content/routes';
 import { useEffect, useState } from 'react';
 
 function App() {
-  const [activeSection, setActiveSection] = useState(null); // Start with null
+  const [activeSection, setActiveSection] = useState(null);
   const [language, setLanguage] = useState('EN');
 
   useEffect(() => {
-    // Delay setting the initial active section to trigger animations
     const timeout = setTimeout(() => {
       setActiveSection('home');
 
-      // Scroll the first section into view with snap-end behavior
       const firstSection = document.querySelector('section');
       if (firstSection) {
         firstSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
       }
-    }, 100); // Adjust the delay as needed (100ms here)
+    }, 100);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -46,8 +44,8 @@ function App() {
   return (
     <main
       className='
-        h-[100dvh]
-        snap-y snap-mandatory overflow-y-scroll scroll-smooth
+        h-[100dvh] overflow-y-scroll scroll-smooth
+        snap-y snap-mandatory
         bg-white-primary
       '
     >
@@ -66,8 +64,8 @@ function App() {
               key={index}
               id={sectionId}
               className={`
-                h-[100dvh] pt-[3.5rem]
-                relative snap-end bg-white-primary
+                h-[100dvh] pt-[3.5rem] relative
+                snap-end bg-white-primary
                 ${!isActive ? 'overflow-x-hidden' : ''}
               `}
             >

@@ -5,7 +5,14 @@ const UtilityBar = ({ setLanguage, currentLanguage }) => {
     const nextLanguage = currentLanguage === 'EN' ? 'NL' : 'EN';
 
     return (
-        <div className="flex items-center justify-center gap-4">
+        <div 
+            className="
+                flex 
+                items-center 
+                justify-center 
+                gap-4
+            "
+        >
             {utilities.map((utility, index) => (
                 <button
                     key={index}
@@ -14,7 +21,13 @@ const UtilityBar = ({ setLanguage, currentLanguage }) => {
                             utility.onClick(setLanguage);
                         }
                     }}
-                    className="utility flex items-center gap-1 font-bold"
+                    className="
+                        utility 
+                        flex 
+                        items-center 
+                        gap-1 
+                        font-bold
+                    "
                     aria-label={utility.label}
                 >
                     {utility.svg}
