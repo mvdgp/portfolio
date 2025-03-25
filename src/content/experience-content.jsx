@@ -5,8 +5,18 @@ export const experience = [
             NL: 'Prestaties'
         },
         slideshow: [
-            '/Donnybap.png',
-            '/Fietsmaatjes.png'
+            { count: 2, label: {
+                EN: 'PRIVATE PROJECTS',
+                NL: 'PRIVÉ PROJECTEN'
+            } },
+            { count: 2, label: {
+                EN: 'SERVICENOW PROJECTS',
+                NL: 'SERVICENOW PROJECTEN'
+            } },
+            { count: 4, label: {
+                EN: 'YEARS OF EXPERIENCE',
+                NL: 'JAAR WERKERVARING'
+            } },
         ],
         introduction: {
             EN: 'I am a huge code enthusiast, looking to break into full-stack development, beyond the borders of SaaS.<br/>Want to see my skills in action? Visit the Portfolio page for a sneak preview!',
@@ -38,7 +48,7 @@ export const experience = [
                 'React',
                 'NextJS',
                 'Tailwind',
-                
+
             ],
             backend: [
                 'REST APIs'
