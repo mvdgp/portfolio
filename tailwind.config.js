@@ -14,15 +14,6 @@ module.exports = {
       fonts: {
         'main-font': ['Poppins', 'sans-serif'],
       },
-      animation: {
-        driftDown: 'driftDown 45s linear infinite',
-      },
-      keyframes: {
-        driftDown: {
-          '0%': { objectPosition: 'center' },
-          '100%': { objectPosition: 'bottom' },
-        },
-      },
     },
   },
   plugins: [],

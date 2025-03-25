@@ -39,33 +39,8 @@ const Experience = ({ language, isActive }) => {
 
     return (
         <div className="flex flex-col h-full w-full">
-            <div
-                className={`
-                    relative transition-all duration-1000 ease-in-out ${isActive ? 'pb-auto lg:pr-12 opacity-100' : 'pb-12 lg:pb-4 lg:pr-0 opacity-0'}
-                    h-full mx-4 mb-4 lg:m-4 p-4 rounded-sm
-                    flex items-end lg:justify-end
-                    bg-white-secondary text-justify
-                `}
-            >
-                {/* Slideshow Images */}
-                {slideshow.map((image, index) => (
-                    <img
-                        key={`${index}-${animationKey}`} // Reset animation by changing key
-                        src={image}
-                        alt={`Slideshow ${index}`}
-                        className={`
-                            absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out
-                            ${index === currentImageIndex ? 'opacity-100 animate-driftDown animate-driftOpacity' : 'opacity-0'}
-                        `}
-                    />
-                ))}
-
-                {/* Introduction Text */}
-                <div
-                    className="relative z-10"
-                    dangerouslySetInnerHTML={{ __html: introduction[language] }}
-                />
-            </div>
+            {/* Slideshow */}
+            <div>test</div>
 
             <div className="h-full w-full flex flex-col lg:flex-row px-4 justify-center pt-1">
                 {/* Achievements */}
