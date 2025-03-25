@@ -134,12 +134,18 @@ const Portfolio = ({ language, isActive }) => {
                 {focusedItem !== null && (
                     <>
                         {/* Display the focused item number */}
-                        <div className="hidden xl:flex absolute bottom-8 right-12 text-black-primary font-extrabold text-6xl">
+                        <div className={`
+                            ${isActive ? 'opacity-100' : 'opacity-0'}
+                            transition ease-in-out hidden xl:flex absolute bottom-8 right-12 text-black-primary font-extrabold text-6xl
+                        `}>
                             {String(focusedItem + 1).padStart(2, '0')}
                         </div>
 
                         {/* Progress Bar */}
-                        <div className="absolute bottom-0 w-full h-3 bg-gray-200 mt-4">
+                        <div className={`
+                            ${isActive ? 'opacity-100' : 'opacity-0'}
+                            transition ease-in-out absolute bottom-0 w-full h-3 bg-gray-200 mt-4
+                        `}>
                             <div
                                 className="absolute bottom-0 left-0 h-full bg-black-primary transition-all duration-500"
                                 style={{

@@ -5,12 +5,8 @@ import Skill from '../components/Skill';
 
 const Experience = ({ language, isActive }) => {
     const [expandedSection, setExpandedSection] = useState('achievements');
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [animationKey, setAnimationKey] = useState(0); // Key to reset animation
     const achievements = experience[0].achievements;
     const skillset = experience[0].skillset;
-    const introduction = experience[0].introduction;
-    const slideshow = experience[0].slideshow;
 
     const toggleSection = (section) => {
         if (expandedSection !== section) {
@@ -25,22 +21,54 @@ const Experience = ({ language, isActive }) => {
         }
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => {
-                const nextIndex = (prevIndex + 1) % slideshow.length;
-                setAnimationKey((key) => key + 1); // Increment key to reset animation
-                return nextIndex;
-            });
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, [slideshow.length]);
-
     return (
-        <div className="flex flex-col h-full w-full">
+        <div className="flex flex-col h-full w-full justify-center items-center">
             {/* Slideshow */}
-            <div>test</div>
+            <div className="w-full flex flex-col items-center justify-center">
+                <ul className={`
+                    transition ease-in-out duration-500
+                    ${isActive ? 'opacity-100' : 'opacity-0'}
+                    w-full my-8 lg:my-16
+                    flex gap-8 justify-center lg:justify-evenly items-center
+                `}>
+                    <li>
+                        <div className="
+                            flex flex-col items-center justify-center
+                            bg-white-secondary
+                            w-[150px] h-[150px] lg:w-[250px]
+                            rounded-sm shadow text-center
+                            hover:scale-105 transition ease-in-out
+                        ">
+                            <h1 className="font-extrabold text-6xl">2</h1>
+                            <p className="text-[1rem]">PRIVATE<br/>PROJECTS</p>
+                        </div>
+                    </li>
+                    <li>
+                    <div className="
+                            flex flex-col items-center justify-center
+                            bg-white-secondary
+                            w-[150px] h-[150px] lg:w-[250px]
+                            rounded-sm shadow text-center
+                            hover:scale-105 transition ease-in-out
+                        ">
+                            <h1 className="font-extrabold text-6xl">2</h1>
+                            <p className="text-[1rem]">SERVICENOW<br/>PROJECTS</p>
+                        </div>
+                    </li>
+                    <li>
+                    <div className="
+                            flex flex-col items-center justify-center
+                            bg-white-secondary
+                            w-[150px] h-[150px] lg:w-[250px]
+                            rounded-sm shadow text-center
+                            hover:scale-105 transition ease-in-out
+                        ">
+                            <h1 className="font-extrabold text-6xl">4</h1>
+                            <p className="text-[1rem]">YEARS OF<br/>EXPERIENCE</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
             <div className="h-full w-full flex flex-col lg:flex-row px-4 justify-center pt-1">
                 {/* Achievements */}
@@ -108,7 +136,7 @@ const Experience = ({ language, isActive }) => {
                     >
                         {Object.entries(skillset).map(([category, skills]) => (
                             skills.length > 0 && (
-                                <div key={category} className="mb-4">
+                                <div key={category} className="mb-4 lg:mb-8">
                                     <p className="font-semibold capitalize">{category}</p>
                                     <ul className="flex flex-wrap gap-2 w-full justify-start">
                                         {skills.map((skill, index) => (

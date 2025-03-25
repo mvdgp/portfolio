@@ -5,7 +5,7 @@ const Achievement = ({ name, institution }) => {
         <div className="
             flex gap-4 items-center
             h-full w-full
-            px-4 py-2
+            p-4
             bg-white-secondary shadow-md
             rounded-sm
             hover:scale-105
