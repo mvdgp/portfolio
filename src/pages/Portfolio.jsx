@@ -91,7 +91,7 @@ const Portfolio = ({ language, isActive }) => {
                         xl:w-full py-4 px-8 xl:px-16 xl:py-0 text-justify
                     ">
                         <h2 className="font-bold uppercase">
-                            {portfolio[focusedItem].name}
+                            {portfolio[focusedItem].name} ({portfolio[focusedItem].date})
                         </h2>
                         <p className="">
                             {portfolio[focusedItem].description[language]}

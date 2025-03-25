@@ -5,10 +5,7 @@ export const portfolio = [
             EN: 'A website for a pop-up restaurant in Amsterdam Noord, built with React.',
             NL: 'Een website voor een pop-up restaurant in Amsterdam Noord, gebouwd met React.'
         },
-        date: {
-            EN: 'November 2024',
-            NL: 'November 2024'
-        },
+        date:'2024',
         image: {
             large:'/Project-Donnybap-large.png',
             small:'/Project-Donnybap-small.png'
@@ -22,10 +19,7 @@ export const portfolio = [
             EN: 'A website for a volunteers organization in Amsterdam Nieuw Sloten, built with NextJS, React and Prismic as headless CMS.',
             NL: 'Een website voor een vrijwilligersorganisatie in Amsterdam Nieuw Sloten, gebouwd met NextJS, React en Prismic als headless CMS.'
         },
-        date: {
-            EN: 'March 2025',
-            NL: 'Maart 2025'
-        },
+        date: '2025',
         image: {
             large:'/Project-Fietsmaatjes-large.png',
             small:'/Project-Fietsmaatjes-small.png'
