@@ -1,5 +1,5 @@
 import React from 'react';
-import { about } from '../content/about';
+import { about } from '../content/home-content';
 
 const Home = ({ language, isActive }) => {
     const { name, title, contactButton } = about[0];
@@ -42,7 +42,7 @@ const Home = ({ language, isActive }) => {
                     relative z-[3] 
                     h-[100dvh] flex flex-col justify-end items-center 
                     xl:justify-center 
-                    pb-32 md:pb-0 xl:pl-[30rem] 
+                    pb-32 xl:pb-0 xl:pl-[30rem] 
                     text-white-secondary xl:text-black-primary 
                     transition-all duration-500 
                     ${isActive ? 'translate-x-0 xl:translate-x-0 xl:translate-y-0' : 'translate-x-full xl:-translate-x-0 xl:-translate-y-full'}
